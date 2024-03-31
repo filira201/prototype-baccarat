@@ -12,14 +12,14 @@ const discardTens = (number) => {
 const restartGame = () => {
   const restartButton = document.createElement("button");
   restartButton.id = "restart-button";
-  restartButton.textContent = "Restart Game"
+  restartButton.textContent = "Restart Game";
   document.getElementById("user-area").appendChild(restartButton);
 
   restartButton.addEventListener("click", () => {
     document.getElementById("table").remove();
     startGame();
-  })
-}
+  });
+};
 
 const win = (winner) => {
   if (winner === "draw") {
@@ -248,7 +248,7 @@ const startGame = () => {
     const card = document.createElement("img");
     card.id = `card`;
     card.classList.add(`player-${i}`);
-    card.src = `/images/${el}.png`;
+    card.src = `images/${el}.png`;
     playerCards.appendChild(card);
   });
 
@@ -256,7 +256,7 @@ const startGame = () => {
     const card = document.createElement("img");
     card.id = `card`;
     card.classList.add(`banker-${i}`);
-    card.src = `/images/${el}.png`;
+    card.src = `images/${el}.png`;
     bankerCards.appendChild(card);
   });
 
